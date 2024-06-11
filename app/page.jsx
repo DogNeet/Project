@@ -162,7 +162,7 @@ export default function Home() {
             </div>
 
             <div className="footer-content">
-              <p>상호명 : 크누장터(주)</p>
+              <p>상호명: 크누장터(주)</p>
               <p>대표: 이시은</p>
               <p>사업자번호: 850-58-00615</p>
               <p>소재지: 대구광역시 북구 대학로 80</p>
