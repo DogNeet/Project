@@ -1,4 +1,8 @@
-export default async function Detail() {
+
+
+export default async function Detail(props) {
+    console.log(props.params.id)
+
     return (
         <div>
             <h4>상세페이지임</h4>

@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import LoginBtn from "./LoginBtn";
 import { connectDB } from "@/util/database";
+import List from "./List";
 
 export default async function Home() {
 
   const db = (await connectDB).db("study")
   let result = await db.collection('post').find().toArray()
-  console.log(result[1].title)
+  console.log(result[1]._id)
 
   return (
 
@@ -17,6 +18,7 @@ export default async function Home() {
 
       <main>
 
+        {/* 검색바 */}
         <div className="search-container">
           <div className="search-wrap">
             <form>
@@ -26,32 +28,11 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="main-container">
-          <div className="main-wrap">
-            {
-              result.map((a, i) => {
-                return (
-                  <div className="main-content">
+        {/* 상품 목록 */}
+        <List></List>
 
-                    <div className="main-img">
-                      <img src={result[i].imagepath} alt="" />
-                    </div>
 
-                    <h3>{result[i].title}</h3>
-                    <h2>{result[i].price}</h2>
-
-                    <div className="sub-content">
-                      <p>{result[i].username}</p>
-                      <p>{result[i].date}</p>
-                    </div>
-
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-
+        {/* 더보기 버튼 */}
         <div className="morebtn-container">
           <button className="morebtn">더보기</button>
         </div>

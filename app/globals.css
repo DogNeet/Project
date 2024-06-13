@@ -1,3 +1,4 @@
+/* 기본 설정 */
 body {
   margin: 0;
 }
@@ -6,17 +7,17 @@ div {
   box-sizing: border-box;
 }
 
-button {
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
-}
 
+/* 로그인 버튼 */
 .Loginbtn {
   font-Weight: 1000;
   color: white;
   font-Size: 15px;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
 }
+
 
 /* navbar 시작 */
 .navbar-container {
@@ -43,16 +44,12 @@ button {
   margin-left: auto;
 }
 
-/* .navbar-login a {
-  font-weight: 1000;
-  color: white;
-} */
-
-/* navbar 끝 */
+/* 끝 */
 
 a {
   text-decoration: none;
 }
+
 
 /* 검색바 시작 */
 .search-icon {
@@ -87,10 +84,10 @@ a {
   outline: none;
 }
 
-/* 검색바 끝 */
+/* 끝 */
 
 
-
+/* 메인 상품 목록 시작 */
 .main-container {
   max-width: 1300px;
   margin: auto;
@@ -107,13 +104,11 @@ a {
   width: 100%;
 }
 
-
 .sub-content {
   display: flex;
   justify-content: space-between;
   margin-top: -30px;
 }
-
 
 h3 {
   margin-top: 10px;
@@ -122,7 +117,6 @@ h3 {
 h2 {
   margin-top: -20px;
 }
-
 
 .main-img {
   width: 100%;
@@ -137,7 +131,10 @@ h2 {
   object-fit: contain;
 }
 
+/* 끝 */
 
+
+/* 더보기 버튼 시작 */
 .morebtn-container {
   display: flex;
   margin-bottom: 100px;
@@ -147,6 +144,10 @@ h2 {
   margin: auto;
 }
 
+/* 끝 */
+
+
+/* footer 시작 */
 footer {
   display: inline-block;
   width: 100%;
@@ -176,6 +177,7 @@ footer ul li:last-child {
   margin-left: 2px;
 }
 
+/* 끝 */
 
 
 
@@ -188,6 +190,8 @@ footer ul li:last-child {
 
 
 
+
+/* 반응형 웹 */
 
 /* 992px 이상일 때 한 줄에 4개 */
 @media screen and (min-width: 992px) {
