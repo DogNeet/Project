@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import LoginBtn from "./LoginBtn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,8 +11,53 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+
+        {/* navbar */}
+        <nav className="navbar-container">
+          <div className="navbar-wrap">
+
+            <div className="navbar-logo">
+              <a href="/">크누장터</a>
+            </div>
+
+            <div className="navbar-login">
+              <LoginBtn></LoginBtn>
+            </div>
+
+          </div>
+        </nav>
+
+
+        {children}
+
+        {/* footer */}
+        <footer>
+          <div className="footer-container">
+            <div className="footer-content">
+              <ul>
+                <li>개인정보처리방침</li>
+                <li>| 고객센터</li>
+              </ul>
+            </div>
+
+            <div className="footer-content">
+              <p>상호명: 크누장터(주)</p>
+              <p>대표: 이시은</p>
+              <p>사업자번호: 850-58-00615</p>
+              <p>소재지: 대구광역시 북구 대학로 80</p>
+            </div>
+
+          </div>
+
+
+
+        </footer>
+
+      </body>
+
     </html>
   );
 }

@@ -6,6 +6,18 @@ div {
   box-sizing: border-box;
 }
 
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.Loginbtn {
+  font-Weight: 1000;
+  color: white;
+  font-Size: 15px;
+}
+
 /* navbar 시작 */
 .navbar-container {
   display: flex;
@@ -31,10 +43,10 @@ div {
   margin-left: auto;
 }
 
-.navbar-login a {
+/* .navbar-login a {
   font-weight: 1000;
   color: white;
-}
+} */
 
 /* navbar 끝 */
 
