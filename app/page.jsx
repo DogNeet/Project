@@ -3,14 +3,17 @@ import styles from "./page.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import LoginBtn from "./LoginBtn";
+import { connectDB } from "@/util/database";
 
+export default async function Home() {
 
-export default function Home() {
+  const db = (await connectDB).db("study")
+  let result = await db.collection('post').find().toArray()
+  console.log(result[1].title)
 
   return (
 
     <div>
-
 
       <main>
 
@@ -25,125 +28,35 @@ export default function Home() {
 
         <div className="main-container">
           <div className="main-wrap">
+            {
+              result.map((a, i) => {
+                return (
+                  <div className="main-content">
 
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
+                    <div className="main-img">
+                      <img src={result[i].imagepath} alt="" />
+                    </div>
 
+                    <h3>{result[i].title}</h3>
+                    <h2>{result[i].price}</h2>
 
+                    <div className="sub-content">
+                      <p>{result[i].username}</p>
+                      <p>{result[i].date}</p>
+                    </div>
 
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
-            <div className="main-content">
-              <div className="main-img">
-                <img src="https://sieunie.shop/img/b1560463-57b3-4295-8a38-bf9474365943.jpeg" alt="" />
-              </div>
-              <h3>쓰다 남은 물티슈 팝니다.</h3>
-              <h2>5,000원</h2>
-              <div className="sub-content">
-                <p>뜨거운 감자</p>
-                <p>3일 전</p>
-              </div>
-            </div>
-
-
+                  </div>
+                )
+              })
+            }
           </div>
-
         </div>
 
         <div className="morebtn-container">
           <button className="morebtn">더보기</button>
         </div>
 
-
-
       </main>
-
-
 
     </div>
   )
