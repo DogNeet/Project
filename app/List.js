@@ -1,4 +1,5 @@
 import { connectDB } from "@/util/database"
+import Link from "next/link"
 
 export default async function List() {
 
@@ -11,22 +12,25 @@ export default async function List() {
             <div className="main-wrap">
                 {
                     result.map((a, i) => {
+
                         return (
-                            <div className="main-content">
 
-                                <div className="main-img">
-                                    <img src={result[i].imagepath} alt="" />
+                            <Link href={'/detail/' + result[i]._id}>
+                                <div className="main-content">
+
+                                    <div className="main-img">
+                                        <img src={result[i].imagepath} alt="" />
+                                    </div>
+
+                                    <h3>{result[i].title}</h3>
+                                    <h2>{result[i].price}</h2>
+
+                                    <div className="sub-content">
+                                        <p>{result[i].username}</p>
+                                        <p>{result[i].date}</p>
+                                    </div>
                                 </div>
-
-                                <h3>{result[i].title}</h3>
-                                <h2>{result[i].price}</h2>
-
-                                <div className="sub-content">
-                                    <p>{result[i].username}</p>
-                                    <p>{result[i].date}</p>
-                                </div>
-
-                            </div>
+                            </Link>
                         )
                     })
                 }
