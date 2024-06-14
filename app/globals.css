@@ -98,7 +98,6 @@ a {
 .main-container {
   max-width: 1300px;
   margin: auto;
-  border: 1px solid black;
 }
 
 .main-wrap {
@@ -258,7 +257,7 @@ footer ul li:last-child {
   display: flex;
   margin-bottom: 20px;
   align-items: center;
-
+  gap: 10px;
   /*
   align-items은 컨테이너에만 적용된다.
   플렉스 아이템에 적용하고싶으면 align-self를 쓰면 된다. 
@@ -280,7 +279,7 @@ footer ul li:last-child {
 .comment-img img {
   width: 100%;
   height: 100%;
-
+  align-items: center;
   /* 
   height: 100%;
   height 값은 주지않고 width 값만 주면 줄어든 크기에 맞게 설정된다.
@@ -290,16 +289,16 @@ footer ul li:last-child {
 
 .comment-info {
   width: 100%;
-  margin-left: 10px;
 }
 
 .comment-info p {
-  width: 100%;
+  /* width: 100%; */
   margin: 0;
 }
 
 #user-info {
   display: flex;
+  width: 100%;
   align-Items: center;
   margin-Bottom: 10px;
 }

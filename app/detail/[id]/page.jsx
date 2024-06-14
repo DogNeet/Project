@@ -29,16 +29,14 @@ export default async function Detail(props) {
                 <div className="comment-wrap">
 
                     <div className="comment">
-
                         <div className="comment-img">
                             <img src="https://sieunie.shop/img/a1f0bbe4-008c-4884-ba4b-4e9ace8ddd7c.jpeg" alt="" />
                         </div>
 
                         <div className="comment-info">
-
                             <div id="user-info">
                                 <div>
-                                    <p>예아</p>
+                                    <p style={{ fontWeight: '1000' }}>닉네임</p>
                                 </div>
 
                                 <div id="date">
@@ -47,11 +45,56 @@ export default async function Detail(props) {
                             </div>
 
                             <div className="comment-content">
-                                <p>반갑노</p>
+                                <p>댓글 테스트</p>
                             </div>
-
                         </div>
                     </div>
+
+                    <div className="comment">
+                        <div className="comment-img">
+                            <img src="https://sieunie.shop/img/a1f0bbe4-008c-4884-ba4b-4e9ace8ddd7c.jpeg" alt="" />
+                        </div>
+
+                        <div className="comment-info">
+                            <div id="user-info">
+                                <div>
+                                    <p style={{ fontWeight: '1000' }}>닉네임</p>
+                                </div>
+
+                                <div id="date">
+                                    <p>방금 전</p>
+                                </div>
+                            </div>
+
+                            <div className="comment-content">
+                                <p>댓글 테스트</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="comment">
+
+                        <div className="comment-img">
+                            <img src="https://sieunie.shop/img/a1f0bbe4-008c-4884-ba4b-4e9ace8ddd7c.jpeg" alt="" />
+                        </div>
+
+                        <div className="comment-info">
+                            <div id="user-info">
+                                <div>
+                                    <span style={{ fontWeight: '1000' }}>닉네임</span>
+                                </div>
+
+                                <div id="date">
+                                    <p>방금 전</p>
+                                </div>
+                            </div>
+
+                            <div className="comment-content">
+                                <p>댓글 테스트</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
 
