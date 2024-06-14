@@ -256,10 +256,10 @@ footer ul li:last-child {
 .comment {
   display: flex;
   margin-bottom: 20px;
-  align-items: center;
+  align-items: top;
   gap: 10px;
   /*
-  align-items은 컨테이너에만 적용된다.
+  align-items은 display 속성이 flex인 컨테이너에만 적용된다.
   플렉스 아이템에 적용하고싶으면 align-self를 쓰면 된다. 
   */
 
@@ -271,8 +271,11 @@ footer ul li:last-child {
 
 .comment-img {
   width: 70px;
+  height: 70px;
   border-radius: 100%;
   overflow: hidden;
+  flex: none;
+  /* align-items: center; */
   /* align-self: center; */
 }
 
@@ -304,6 +307,7 @@ footer ul li:last-child {
 }
 
 #date {
+  width: 100px;
   margin-left: 10px;
   font-size: 14px;
 }

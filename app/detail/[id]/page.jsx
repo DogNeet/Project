@@ -85,7 +85,7 @@ export default async function Detail(props) {
                                 </div>
 
                                 <div id="date">
-                                    <p>방금 전</p>
+                                    <p>10년 전</p>
                                 </div>
                             </div>
 
